@@ -70,19 +70,6 @@ export interface PhotoViewerOptions {
          */
         completionCallback?: () => void;
     }
-
-    android?: {
-        /**
-         * Optional string value telling the fullscreen image gallery what type of background color palette to use:
-         * (VIBRANT, LIGHT_VIBRANT, DARK_VIBRANT, MUTED, LIGHT_MUTED, DARK_MUTED)
-         */
-        paletteType?: PaletteType;
-
-        /**
-         * Set to true if you want to show the album first, otherwise false if you want to show fullscreen slides directly.
-         */
-        showAlbum?: boolean;
-    }
 }
 
 /**
