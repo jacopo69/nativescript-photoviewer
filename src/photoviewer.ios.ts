@@ -30,8 +30,6 @@ export class PhotoViewer implements PhotoViewerBase {
             options = {};
         if(!options.ios)
             options.ios = {};
-        if(!options.android)
-            options.android = {};
 
         let photosArray = NSMutableArray.alloc<NYTPhoto>().init();
         let startIndex: number = options.startIndex || 0;
