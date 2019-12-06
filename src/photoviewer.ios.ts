@@ -81,7 +81,7 @@ export class PhotoViewer implements PhotoViewerBase {
         frame.topmost().ios.controller.presentViewControllerAnimatedCompletion(this.nativeView, true, iosCompletionCallback);
 
         return new Promise<void>((resolve) => {
-            this._delegate = PhotoViewerDelegateImpl.initWithResolve(resolve);
+            this._delegate = PhotoViewerDelegateImpl.initWithResolve(iosDismissCallBack);
             this.nativeView.delegate = this._delegate;
         });
     }
