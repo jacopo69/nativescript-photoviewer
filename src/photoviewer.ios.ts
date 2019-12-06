@@ -4,7 +4,6 @@ import { isFileOrResourcePath } from "tns-core-modules/utils/utils";
 import * as imageSource from "tns-core-modules/image-source/image-source";
 import * as frame from "tns-core-modules/ui/frame";
 
-import { PaletteType } from "./photoviewer.common";
 export * from './photoviewer.common';
 
 declare const NSAttributedString: any;
@@ -34,6 +33,7 @@ export class PhotoViewer implements PhotoViewerBase {
         let photosArray = NSMutableArray.alloc<NYTPhoto>().init();
         let startIndex: number = options.startIndex || 0;
         let iosCompletionCallback = options.ios.completionCallback || null;
+        let iosDismissCallBack = options.ios.dismissCallback || null;
     
         imagesArray.forEach((imageItem: string | NYTPhotoItem) => {
     
@@ -168,6 +168,7 @@ class PhotoViewerDelegateImpl extends NSObject implements NYTPhotosViewControlle
     }
 
     public photosViewControllerDidDismiss(photosViewController: NYTPhotosViewController) {
+        console.log("NYTPhotosView controller dismissed");
         this._resolve();
     }
 }

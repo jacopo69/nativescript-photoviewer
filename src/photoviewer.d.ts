@@ -1,14 +1,3 @@
-
- export enum PaletteType {
-    'Vibrant' = 'vibrant',
-    'LightVibrant' = 'light_vibrant',
-    'DarkVibrant' = 'dark_vibrant',
-    'Muted' = 'muted',
-    'LightMuted' = 'light_muted',
-    'DarkMuted' = 'dark_muted'
-}
-
-
 export interface PhotoViewerOptions {
 
     /**
@@ -69,6 +58,8 @@ export interface PhotoViewerOptions {
          * Optional function to run after the gallery has finished loading images and is visible
          */
         completionCallback?: () => void;
+
+        dismissCallback?: () => void;
     }
 }
 
