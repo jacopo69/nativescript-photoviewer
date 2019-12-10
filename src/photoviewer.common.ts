@@ -5,4 +5,4 @@ export enum PaletteType {
     'Muted' = 'muted',
     'LightMuted' = 'light_muted',
     'DarkMuted' = 'dark_muted'
-} 
+}
